@@ -20,28 +20,3 @@ with open('sum_poly.txt', 'w') as file:
 
 print(f'{lst_poly1} + {lst_poly2}')
 
-
-
-
-
-
-exit()
-with open('poly1.txt', 'w+') as file:
-    file.write('8x**3 + 2x**5 - 4y')
-
-with open('poly2.txt', 'w+') as file:
-    file.write('41x**4 + 9y**6')
-
-with open('poly1.txt','r') as file:
-    poly1 = file.readline()
-    lst_poly1 = poly1.split()
-
-with open('poly2.txt','r') as file:
-    poly_2 = file.readline()
-    lst_poly2 = poly_2.split()
-
-with open('sum_poly.txt', 'w') as file:
-    file.write(f'{lst_poly1} + {lst_poly2}')
-
-print(f'{lst_poly1} + {lst_poly2}')
-# sum_poly = lst_poly1 + lst_poly2
