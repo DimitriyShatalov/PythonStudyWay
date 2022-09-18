@@ -1,24 +1,10 @@
 # 2. Задайте натуральное число N. 
 # Напишите программу, которая составит список простых множителей числа N.
 
-# int = num(input("Введите число: "))
-# int = int(input("Введите число: "))
-# i = 2 # первое простое число
-# = lst []
-# old  =  число
-# while <= <= num:
-#     0 == % % == 0:
-#         lst.append(i)
-#         num  //= i
-#         i  = 2
-#     else:
-#         i += 1
-# print(f"Простые множители числа {old} приведены в списке: {lst}")
-
-num = int(input("Введите число: "))
-i = 2 # первое простое число
+num = int(input("Enter number: "))
+i = 2
 lst = []
-old = num
+figure = num
 while i <= num:
     if num % i == 0:
         lst.append(i)
@@ -26,4 +12,4 @@ while i <= num:
         i = 2
     else:
         i += 1
-print(f"Простые множители числа {old} приведены в списке: {lst}")
+print(f'The prime factors of the number {figure} are given in the list: {lst}')
