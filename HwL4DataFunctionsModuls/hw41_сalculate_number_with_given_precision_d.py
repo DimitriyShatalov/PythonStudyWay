@@ -9,9 +9,10 @@ from math import pi
 
 d = input('What is the number of elements in the pi after the dot to leave? ')
 pi=22/7
-
 print('{:.{}f}'.format(pi, d))
 
+
+# В этом решении количество элементов после целого значения может быть не более 15
 # d =  int(input("Enter a number for the specified precision of Pi: "))
 # print(f'Specified precision {d}. Pi = {round(pi, d)}')
 
