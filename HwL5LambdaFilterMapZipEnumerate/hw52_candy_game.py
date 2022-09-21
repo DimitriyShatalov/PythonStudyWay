@@ -8,60 +8,30 @@
 
 # a) Добавьте игру против бота
 # b) Подумайте как наделить бота ""интеллектом""
+
 from re import S
-
-# m = 28
-# candy = 2021
-# quant = (candy % (m + 1))
-# print(f'Сколько конфет нужно взять первому игроку, чтобы забрать все конфеты?: ')
-# print(quant)
+import random
 
 
-# При помощи функции def take_input собираем информацию от пользователей
-#  и проверяем правильно ли пользователеь вводит необходимые цифры
-#  пользователь может вводить цифры от 1 до 9, которые еще не закрыты
-def take_input(player_token):
-    valid = False
-    while not valid:
-        player_answer = input("Ваш ход: " + player_token + '?')
+candy_k = 2021
+candy_max = 28
+remain = candy_k%(candy_max + 1)
 
-        try:
-            player_answer = int(player_answer)
-        except:
-            print('Некоректный ввод. Введите число не более 28?')
-            continue
-        if 1 > player_answer > 28:
-        # #     if(str(board[player_answer - 1]) not in 'XO'):
-        # #         board[player_answer - 1] = player_token
-                valid = True
-        else:
+chat_bot = 'Петрович'
+print(f'Привет, меня зовут {chat_bot}.')
+name = str(input('А как тебя зовут? \n'))
 
-            print('Эта клетка уже занята!')
+print(f'Рад познакомиться, {name}. Поиграем? Жмякни на Enter.')
+s = str(input())
 
-    else:
-       
-        take_input(player_token)
-print('Введите число от 1 до 28')
-
-# def main(candy):
-#     counter = 0
-#     win = False
-#     while not win:
-#         # draw_board(board)
-#         if counter % 2 == 0:
-#             take_input('X')
-#         else:
-#             take_input('O')
-#         counter +=1
-
-#         if counter > 4:
-#             tmp = check_win(board)
-#             if tmp:
-#                 print(tmp, 'Ты выиграл!')
-#                 win = True
-#                 break
-#         if counter == 9:
-#             print('Ничья!')
-#             break
-#     draw_board(board)
-# main(board)
+rand = random.randint(1,2)
+answer = int(input('Монета брошена. Выбери: (орел: 1) или (решка: 2). \n'))
+# flag = 0
+if answer == rand:
+    print(f'Ты везунчик, {name}. Начинай.')
+else:
+    answer != rand
+    print(f'Похоже сегодня не твой день, {name}. Начинаю я.')
+    print(f'Беру {remain} конфет. В остатке {candy_k - remain}')
+input()
+print('Твой ход')
